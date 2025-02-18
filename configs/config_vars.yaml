@@ -1,0 +1,7 @@
+main_worker_threads: 2
+fs_worker_threads: 1
+monitor_worker_threads: 1
+logger_level: info
+is_testing: false
+server_port: 8080
+hosts_list:  [repotest.ru, wordle-task.repotest.ru]
