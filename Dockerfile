@@ -25,6 +25,6 @@ RUN cd /server-http && mkdir build && cd build && \
     cmake --build . && \
     cpack . && \
     mkdir /result && \
-    copy *.deb /result/
+    cp *.deb /result/
 
 ENTRYPOINT ["ls /result && echo .deb file in /result/" ]
