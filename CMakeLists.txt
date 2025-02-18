@@ -44,11 +44,9 @@ install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}
         DESTINATION bin
         PERMISSIONS WORLD_EXECUTE OWNER_WRITE OWNER_READ)
 
-install(FILES configs/static_config.yaml
+install(FILES configs/dummy.yaml
         DESTINATION /etc/${CMAKE_PROJECT_NAME}/)
 
-install(FILES configs/config_vars.yaml
-        DESTINATION /etc/${CMAKE_PROJECT_NAME}/)
 execute_process(COMMAND mkdir ${CMAKE_CURRENT_BINARY_DIR}/symlink)
 execute_process(COMMAND ln -s /opt/${CMAKE_PROJECT_NAME}/bin/${CMAKE_PROJECT_NAME} ${CMAKE_CURRENT_BINARY_DIR}/symlink/${CMAKE_PROJECT_NAME})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/symlink/server-http
