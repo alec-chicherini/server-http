@@ -17,7 +17,8 @@ int main(int argc, char* argv[]) {
                             .Append<userver::clients::dns::Component>()
                             .Append<userver::server::handlers::TestsControl>()
                             .Append<userver::components::FsCache>("repotest.ru")
-                            .Append<userver::components::FsCache>("wordle-client-qt.repotest.ru")
+                            .Append<userver::components::FsCache>("wordle-client-qt-25-02.repotest.ru")
+                            .Append<userver::components::FsCache>("wordle-client-qt-25-03.repotest.ru")
                             .Append<server_http::HttpHandlerSubdomainStatic>();
 
   return userver::utils::DaemonMain(argc, argv, component_list);
